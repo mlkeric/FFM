@@ -1,0 +1,5 @@
+{
+  "name": "FFM Guia Prático Chatbot",
+  "description": "A chatbot to help users find information on the FFM 'Guia Prático de Fomento' website and its associated documents, using Gemini for intelligent search and responses.",
+  "requestFramePermissions": []
+}
