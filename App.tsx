@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
-import Chat from './components/Chat';
-import { ShareIcon } from './components/icons';
-import type { Message } from './types';
-import { runQuery } from './services/geminiService';
+import Chat from './components/Chat.tsx';
+import { ShareIcon } from './components/icons.tsx';
+import type { Message } from './types.ts';
+import { runQuery } from './services/geminiService.ts';
 
 const App: React.FC = () => {
   const [messages, setMessages] = useState<Message[]>([

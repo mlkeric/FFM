@@ -1,6 +1,6 @@
 import React, { useRef, useEffect } from 'react';
-import type { Message } from '../types';
-import { SendIcon, LinkIcon } from './icons';
+import type { Message } from '../types.ts';
+import { SendIcon, LinkIcon } from './icons.tsx';
 
 interface ChatProps {
   messages: Message[];

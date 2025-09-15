@@ -1,6 +1,5 @@
-
 import { GoogleGenAI } from "@google/genai";
-import type { Source } from '../types';
+import type { Source } from '../types.ts';
 
 if (!process.env.API_KEY) {
   throw new Error("API_KEY environment variable not set");
