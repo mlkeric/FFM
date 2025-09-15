@@ -1,13 +1,15 @@
 import { GoogleGenAI } from "@google/genai";
 import type { Source } from '../types.ts';
 
-if (!process.env.API_KEY) {
-  throw new Error("API_KEY environment variable not set");
-}
-
-const ai = new GoogleGenAI({ apiKey: process.env.API_KEY });
-
 export const runQuery = async (query: string): Promise<{ text: string; sources: Source[] }> => {
+  const apiKey = typeof process !== 'undefined' && process.env ? process.env.API_KEY : undefined;
+
+  if (!apiKey) {
+    throw new Error("A configuração da chave de API (API_KEY) não foi encontrada. O assistente não pode processar pedidos.");
+  }
+  
+  const ai = new GoogleGenAI({ apiKey: apiKey });
+
   try {
     const model = "gemini-2.5-flash";
 
