@@ -13,6 +13,21 @@
         font-family: 'Lato', sans-serif;
       }
     </style>
+  <script>
+    // Polyfill 'process' for browser environments to prevent crashes from
+    // libraries that expect a Node.js environment. This must run before any
+    // other scripts that might depend on it.
+    if (typeof process === 'undefined') {
+      window.process = {
+        env: {
+          // This is a placeholder. The actual API key handling within the app
+          // will show an error if the key isn't properly configured.
+          // This polyfill just prevents the initial crash.
+          API_KEY: "" 
+        }
+      };
+    }
+  </script>
   <script type="importmap">
 {
   "imports": {
